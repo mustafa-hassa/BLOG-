@@ -1,0 +1,226 @@
+@import url("footer.css");
+@import url("header.css");
+@import url("core.css");
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 20px;
+}
+
+p em {
+  font-style: italic;
+  text-decoration: underline;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 10px;
+}
+#about {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+#my {
+    width: 450px;
+    height: 400px;
+}
+a:hover {
+    text-decoration: underline;
+}
+.page {
+    display: grid;
+    width: fit-content;
+    height: 165vh;
+    background-color: #fff;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+      "logo logo logo logo logo logo logo logo logo logo"
+      "cont cont cont cont cont cont cont cont cont cont"
+      "foot foot foot foot foot foot foot foot foot foot";
+  }
+  
+  .logo {
+    grid-area: logo;
+    background-color: #0064ff52;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  img {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .contant {
+    grid-area: cont;
+    background-color: rgb(90 124 213 / 16%);    ;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .contant div {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .contant h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .contant p ,
+  .contant blockquote {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: black;
+
+  }
+  figcaption {
+    font-size: 21px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /*@media only screen and (max-width: 600px) {
+   
+
+    .page {
+      grid-template-columns:  1fr;
+  
+    } 
+  .contant {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .contant .post figure {
+    max-width: 20px;
+  }
+
+
+  }*/
+  /* Medium screen (max-width: 992px) */
+@media only screen and (max-width: 992px) {
+  .page {
+     grid-template-columns: repeat(6, 1fr);
+   }
+ 
+  .contant {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+  .contant.post figure {
+     max-width: 30px;
+   }
+ 
+   img {
+     width: 300px;
+     height: 200px;
+   }
+   .icons {
+    flex-wrap: wrap;
+  }
+  .icons a {
+    margin: 10px;
+ }
+ .foot {
+  height: fit-content;
+  padding: 5px;
+}
+}
+ 
+ /* Small screen (max-width: 600px) */
+ @media only screen and (max-width: 600px) {
+  .page {
+     grid-template-columns: 1fr;
+   }
+ 
+  .contant {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+  .contant.post figure {
+     max-width: 20px;
+   }
+ 
+   img {
+     width: 200px;
+     height: 150px;
+   }
+   footer {
+    flex-direction: column;
+     align-items: center;
+   }
+   
+   .foot {
+    height: fit-content;
+    padding: 5px;
+  }
+.icons {
+  flex-wrap: wrap;
+}
+.icons a {
+  margin: 5px;
+}
+.icons i {
+  font-size: 20px;
+}
+ }
+ 
+ /* Extra small screen (max-width: 400px) */
+ @media only screen and (max-width: 400px) {
+  .page {
+     grid-template-columns: 1fr;
+   }
+ 
+  .contant {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+  .contant.post figure {
+     max-width: 15px;
+   }
+ 
+   img {
+     width: 150px;
+     height: 100px;
+   }
+   
+footer {
+  position: static; 
+}
+.foot {
+  height: fit-content;
+  padding: 5px;
+}
+.icons {
+  flex-wrap: wrap;
+}
+.icons a {
+  margin: 2px;
+}
+.icons i {
+  font-size: 16px;
+}
+ }
+
+
+
+  
